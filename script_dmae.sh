@@ -13,7 +13,7 @@ baixa_declaracoes(){
     while [ $anoInicio -le $anoFim ]
     do
         echo "Baixando ano $anoInicio do ramal $ramal"
-        $(wget -o declaracoes/declaracao_anual_dmae_$ramal_$anoInicio.pdf $baseUrl?criterioIdentificacaoRamal=$ramal\&ano=$anoInicio)
+        $(wget -O declaracoes/declaracao_anual_dmae_$ramal_$anoInicio.pdf $baseUrl?criterioIdentificacaoRamal=$ramal\&ano=$anoInicio)
         ((anoInicio++))
     done
 }
